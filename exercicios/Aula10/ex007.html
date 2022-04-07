@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soamndo valores</title>
+    <style>
+        body {
+            font: normal 20px arial;
+        }
+        div {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="tn1" id="tn1"> <!--janela para receber o primeiro valor-->
+    + 
+    <input type="number" name="tn2" id="tn2"> <!--janela para receber o segundo valor-->
+    <input type="button" value="somar" onclick="clicar()"> <!--botão para executar a fuction de click-->
+    <div id="res">Resultado</div> <!--área para mostrar o resultado-->
+
+    <script>
+        function clicar() {
+            var tn1 = (window.document.getElementById('tn1')) // armazenando o primeiro número digitado na variável tn1
+            var tn2 = (window.document.getElementById('tn2'))// armazenando o segundo número dgitado na variável tn2
+            var n1 =  Number(tn1.value) // convertendo o valor de tn1 para número
+            var n2 = Number(tn2.value)// convertendo o valor de tn2 para número
+            var soma = n1 + n2 // armazenando a soma dos valores depois de convertidos na variável soma
+            var res = window.document.getElementById('res')// armazenando o conteúdo da div dentro da variável res para mudar na próxima linha de código
+            res.innerHTML = `A soma entre ${n1} e ${n2} é <strong>${soma}</strong>` // mudando o conteúdo do html da variável res que no caso é a div com id res
+
+
+            
+        }
+        
+    </script>
+    
+</body>
+
+</html>
