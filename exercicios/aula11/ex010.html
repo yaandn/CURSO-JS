@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+        body {
+            font: normal 20px arial;
+
+        }
+        div#res {
+            margin-top: 10px;
+
+        }
+        input {
+            margin-left: 5px;
+            
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h
+    <input type="button" value="Vefificar" onclick="clicar()">
+    <div id="res"></div>
+
+    <script>
+        function clicar() {
+            var txtvel = window.document.getElementById('txtvel')
+            var vel = Number(txtvel.value)
+            var res = window.document.getElementById('res')
+            res.innerHTML = `<p>Sua velocidade é de <strong>${vel} Km/h</strong></p> <p>Você está dentro do limite de velocidade.</p> </br> Dirija sempre usando sinto de segurança.`
+
+                if (vel > 60) {
+                    res.innerHTML = `Você ultrapassou o limite de velocidade. MULTADO.`
+                }
+
+
+        }
+
+    </script>
+    
+</body>
+</html>
