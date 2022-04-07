@@ -23,21 +23,22 @@
     </style>
 </head>
 <body>
-    <h1>Sistema de multas</h1>
-    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h
-    <input type="button" value="Vefificar" onclick="clicar()">
-    <div id="res"></div>
+    <h1>Sistema de multas</h1> <!--Criando o título do site-->
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h <!--Colocando a caixa de texto na tela para receber a velocidade-->
+    <input type="button" value="Vefificar" onclick="clicar()"> <!--colocando o botão na tela para receber a função de clique-->
+    <div id="res"></div> <!--Criando a div para aparecer os textos do resultado da função-->
 
     <script>
         function clicar() {
-            var txtvel = window.document.getElementById('txtvel')
-            var vel = Number(txtvel.value)
-            var res = window.document.getElementById('res')
-            res.innerHTML = `<p>Sua velocidade é de <strong>${vel} Km/h</strong></p> <p>Você está dentro do limite de velocidade.</p> </br> Dirija sempre usando sinto de segurança.`
+            var txtvel = window.document.getElementById('txtvel') // armazenando o valor digitado na caixa de texto na variável txtvel
+            var vel = Number(txtvel.value) // convertendo os valores de txtvel para número e armazenando na variável vel
+            var res = window.document.getElementById('res') // colocando a div do resultado dentro da variável res para que possa ser modificada
+            res.innerHTML = `<p>Sua velocidade é de <strong>${vel} Km/h</strong></p>`
 
-                if (vel > 60) {
-                    res.innerHTML = `Você ultrapassou o limite de velocidade. MULTADO.`
+                if (vel > 60) { // se a velocidade for maior que 60
+                    res.innerHTML += `Você ultrapassou o limite de velocidade. MULTADO.` // adicionando no  html da div caso a condição seja verdadeiro
                 }
+                res.innerHTML += '<p>Dirija sempre unsando sinto de segurança</p>' // adicionando no html da div apesar do resultado da condição 
 
 
         }
