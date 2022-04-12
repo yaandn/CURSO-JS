@@ -9,16 +9,27 @@
 </head>
 <body>
     <header>
-        <h1>Hora do dia</h1>
+        <h1>Vamos contar</h1>
+        
 
     </header>
     <section>
         <div>
-            <p>Agora são x horas</p>
+            <p>Início: <input type="number" name="txtinicio" id="txtinicio"></p>
+            <p>Fim: <input type="number" name="txtfim" id="txtfim"></p>
+            <p>Passo: <input type="number" name="txtpasso" id="txtpasso"></p>
+            <input type="button" value="contar" onclick="clicar()">
+
+            
+            
 
         </div>
-        <div>
-            <img src="" alt="">
+        <hr>
+        <div id="res">
+            Preparando a contagem...
+            
+
+            
 
         </div>
 
@@ -27,7 +38,11 @@
         <p>&copy; CursoemVídeo</p>
 
     </footer>
+
+
+
     <script src="script.js"></script>
+    
     
 </body>
 </html>
